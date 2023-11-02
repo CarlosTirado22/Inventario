@@ -110,7 +110,7 @@ foreach ($this->productos as $row) { ?>
                     </td>
                   </tr>
 
-              <tbody id="flush-collapse<?php echo $i; ?>" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+              <tbody id="flush-collapse" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
 
                 <?php foreach ($bodega['lotes'] as $lote) { 
                   ?>
