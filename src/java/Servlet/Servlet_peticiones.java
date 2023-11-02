@@ -7,6 +7,7 @@ package Servlet;
 import Operaciones.*;
 import java.io.IOException;
 import java.io.PrintWriter;
+import static java.lang.System.out;
 import java.util.Vector;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -66,10 +67,10 @@ public class Servlet_peticiones extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-       // processRequest(request, response);
-       
-       
-       
+     out.print("Hola");
+//     request.getRequestDispatcher("/JSP/views/header.jsp");
+     request.getRequestDispatcher("/JSP/views/bodegas/index.jsp").forward( request, response );
+     request.getRequestDispatcher("/JSP/views/footer.jsp").forward( request, response );
     }
 
     /**
