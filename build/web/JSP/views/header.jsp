@@ -12,23 +12,23 @@
   <!--     Fonts and icons     -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
   <!-- Nucleo Icons -->
-  <link href="<?php echo constant('URL'); ?>public/css/nucleo-icons.css" rel="stylesheet" />
-  <link href="<?php echo constant('URL'); ?>public/css/nucleo-svg.css" rel="stylesheet" />
+  <link href="/Inventario/public/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="/Inventario/public/css/nucleo-svg.css" rel="stylesheet" />
   <!-- Font Awesome Icons -->
   <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
-  <link href="<?php echo constant('URL'); ?>public/css/nucleo-svg.css" rel="stylesheet" />
+  <link href="/Inventario/public/css/nucleo-svg.css" rel="stylesheet" />
   <!-- CSS Files -->
-  <link id="pagestyle" href="<?php echo constant('URL'); ?>public/css/soft-ui-dashboard.css?v=1.0.6" rel="stylesheet" />
+  <link id="pagestyle" href="/Inventario/public/css/soft-ui-dashboard.css?v=1.0.6" rel="stylesheet" />
   <!-- Datatables -->
   <link href="https://unpkg.com/vanilla-datatables@latest/dist/vanilla-dataTables.min.css" rel="stylesheet" type="text/css">
   <script src="https://unpkg.com/vanilla-datatables@latest/dist/vanilla-dataTables.min.js" type="text/javascript"></script>
   <link rel="stylesheet" href="estilo.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-  <link rel="stylesheet" href="<?php echo constant('URL'); ?>public/js/jquery-ui/jquery-ui-min.css">
+  <link rel="stylesheet" href="/Inventario/public/js/jquery-ui/jquery-ui-min.css">
 
-  <script src="<?php echo constant('URL'); ?>public/js/jquery-3.5.1.min.js"></script>
-  <script src="<?php echo constant('URL'); ?>public/js/jquery-ui/jquery-ui.min.js"></script>
+  <script src="/Inventario/public/js/jquery-3.5.1.min.js"></script>
+  <script src="/Inventario/public/js/jquery-ui/jquery-ui.min.js"></script>
 
 </head>
 
@@ -37,7 +37,7 @@
     <div class="sidenav-header">
       <!-- <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i> -->
       <a class="navbar-brand m-0" href="#">
-        <img class="navbar-brand-img" src="<?php echo constant('URL'); ?>public/img/logo-ddc.png">
+        <img class="navbar-brand-img" src="/Inventario/public/img/logo-ddc.png">
       </a>
     </div>
 
@@ -47,7 +47,7 @@
     <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
       <ul class="navbar-nav">
       <li class="nav-item " >
-          <a id="nav-inventario" class="nav-link" href="<?php echo constant('URL'); ?>inventario">
+          <a id="nav-inventario" class="nav-link" href="/Inventario/">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
             <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 96 960 960" width="48"><path d="M431 922H180q-24 0-42-18t-18-42V280q0-24 15.5-42t26.5-18h202q7-35 34.5-57.5T462 140q36 0 63.5 22.5T560 220h202q24 0 42 18t18 42v203h-60V280H656v130H286V280H180v582h251v60Zm189-25L460 737l43-43 117 117 239-239 43 43-282 282ZM480 276q17 0 28.5-11.5T520 236q0-17-11.5-28.5T480 196q-17 0-28.5 11.5T440 236q0 17 11.5 28.5T480 276Z"/></svg>
                 <title>Inventario</title> 
