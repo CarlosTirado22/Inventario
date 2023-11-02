@@ -1,4 +1,4 @@
-
+<jsp:include page="/JSP/views/header.jsp" />
 
 <div class="col-md-12">
   <div class="card">
@@ -78,3 +78,5 @@
     </div>
   </div>
 </div>
+
+<jsp:include page="Inventario/JSP/views/footer.jsp" />
