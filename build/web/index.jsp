@@ -147,7 +147,7 @@
     <!-- End Navbar -->
     <div class="container-fluid py-4">
       <div class="row">
-          
+          <a href="/Inventario/Servlet_peticiones">Servlet</a>
           </div>
 </div>
 <footer class="footer pt-3  ">
