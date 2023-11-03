@@ -29,7 +29,7 @@ public class VerificaLogin extends HttpServlet {
 
             if ( usuvo != null )
             {
-               getServletContext().getRequestDispatcher("/JSP/index2.jsp").forward(request,response) ;
+               getServletContext().getRequestDispatcher("/JSP/views/inventario/index.jsp").forward(request,response) ;
             } else   throw new NullPointerException("El usuario no existe...");
             } catch( Exception e) {
                 request.setAttribute("msg",e.getMessage());

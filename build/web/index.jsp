@@ -14,7 +14,26 @@
     <link rel="stylesheet" type="text/css" href="/Inventario/public/css/style.css">
     <link href="/Inventario/public/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 </head>
+<SCRIPT language="JavaScript" >
 
+        function verificar( servi )
+        {
+            if ( servi.login.value == "")
+            {
+                alert( "Falta el nombre del usuario");
+                servi.login.focus();
+                return false;
+            }
+             if ( servi.pwd.value == "")
+            {
+                alert( "Falta la contraseña" );
+                servi.pwd.focus();
+                return false;
+            }
+            return true;
+        }
+
+    </SCRIPT>
 <body>
     <img class="wave" src="public/img/wave.png">
     <div class="container">
@@ -23,7 +42,7 @@
             <img src="public/img/logo-ddc.png">
         </div>
         <div class="login-content">
-            <form method="POST" action="">
+            <form method="POST" action="/Inventario/VerificaLogin">
                 <!-- <img src="img/avatar.svg"> -->
                 <h2 class="title">BIENVENIDO</h2>
                 
@@ -33,7 +52,7 @@
                     </div>
                     <div class="div">
                         <h5>Usuario</h5>
-                        <input id="usuario" type="text" class="input" name="usuario" value="">
+                        <input id="usuario" type="text" class="input" name="login" value="">
                     </div>
                 </div>
                 <div class="input-div pass">
@@ -42,7 +61,7 @@
                     </div>
                     <div class="div">
                         <h5>Contraseña</h5>
-                        <input type="password" id="input" class="input" name="password">
+                        <input type="password" id="input" class="input" name="pwd">
                     </div>
                 </div>
                 <div class="view">
