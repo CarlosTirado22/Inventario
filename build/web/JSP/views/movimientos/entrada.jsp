@@ -1,4 +1,4 @@
-<?php require 'views/header.php'; ?>
+<jsp:include page="/JSP/views/header.jsp" />
 
 <div class="col-md-12">
   <div class="card card-user">
@@ -271,5 +271,7 @@
   activo.classList.add('disabled');
 </script>
 
+
+<jsp:include page="/JSP/views/footer.jsp" />
 
 

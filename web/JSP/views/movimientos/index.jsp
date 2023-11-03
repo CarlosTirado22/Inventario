@@ -1,3 +1,5 @@
+<jsp:include page="/JSP/views/header.jsp" />
+
 <div class="col-md-12">
   <div class="card">
     
@@ -71,3 +73,5 @@
   activo.classList.add('active');
   activo.classList.add('disabled');
 </script>
+
+<jsp:include page="/JSP/views/footer.jsp" />

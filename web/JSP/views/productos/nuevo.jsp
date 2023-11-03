@@ -1,3 +1,4 @@
+<jsp:include page="/JSP/views/header.jsp" />
 
 
 <div class="col-md-12">
@@ -10,7 +11,6 @@
 
         <div class="row">
 
-          <?php if ($this->mensaje) { ?>
             <div class="alert alert-danger alert-dismissible fade show text-white" role="alert">
               <strong>Ha ocurrido un error! </strong> <?php echo $this->mensaje; ?>
               <button type="button" class="close my-auto text-white" data-bs-dismiss="alert" aria-label="Close">x</button>
@@ -18,7 +18,7 @@
 
 
 
-          <?php } ?>
+          
 
           <div class="row">
             <div class="col-md-8 pr-1">
@@ -60,4 +60,6 @@
     </div>
   </div>
 </div>
+
+<jsp:include page="/JSP/views/footer.jsp" />
 

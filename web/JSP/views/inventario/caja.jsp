@@ -1,4 +1,4 @@
-
+<jsp:include page="/JSP/views/header.jsp" />
 
 
 <div id="layoutSidenav_content">
@@ -226,4 +226,4 @@
         })
     </script>
 
-
+<jsp:include page="/JSP/views/footer.jsp" />

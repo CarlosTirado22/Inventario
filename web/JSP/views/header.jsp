@@ -57,7 +57,7 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link border-bottom" id="nav-movimientos" href="<?php echo constant('URL') ?>movimientos">
+          <a class="nav-link border-bottom" id="nav-movimientos" href="/Inventario/JSP/views/movimientos/index.jsp">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
             <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 96 960 960" width="48"><path d="M322 606V290L202 410l-42-42 193-193 193 193-42 42-122-121v317h-60Zm285 369L414 781l42-41 120 120V544h60v317l122-121 42 42-193 193Z"/></svg>
             </div>
@@ -67,7 +67,7 @@
 
         
         <li class="nav-item">
-          <a id="nav-productos" class="nav-link" href="<?php echo constant('URL'); ?>productos">
+          <a id="nav-productos" class="nav-link" href="/Inventario/JSP/views/productos/index.jsp">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
             <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 96 960 960" width="48"><path d="M160 796V276H80v-60h140v520h620v60H160Zm59.115 180Q194 976 177 958.323q-17-17.677-17-42.5t17-42.323q17-17.5 42.115-17.5 25.115 0 43 17.677t17.885 42.5Q280 941 262.115 958.5t-43 17.5ZM290 666V446h220v220H290Zm60-60h100V506H350v100Zm220 60V446h220v220H570Zm60-60h100V506H630v100Zm149.823 370Q755 976 737.5 958.323t-17.5-42.5Q720 891 737.677 873.5t42.5-17.5Q805 856 822.5 873.677t17.5 42.5Q840 941 822.323 958.5t-42.5 17.5ZM350 606h100-100Zm280 0h100-100Z"/></svg>
             </div>
@@ -75,7 +75,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a id="nav-bodegas" class="nav-link" href="<?php echo constant('URL'); ?>bodegas">
+          <a id="nav-bodegas" class="nav-link" href="/Inventario/JSP/views/bodegas/index.jsp">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
             <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 96 960 960" width="48"><path d="M120 1016V136h60v80h600v-80h60v880h-60v-80H180v80h-60Zm60-469h110V387h220v160h270V276H180v271Zm0 329h270V716h220v160h110V607H180v269Zm170-329h100V447H350v100Zm160 329h100V776H510v100ZM350 547h100-100Zm160 329h100-100Z"/></svg>
             </div>

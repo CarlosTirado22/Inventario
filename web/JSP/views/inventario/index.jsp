@@ -1,4 +1,4 @@
-
+<jsp:include page="/JSP/views/header.jsp" />
 
 
 <div class="col-md-12">
@@ -25,8 +25,7 @@
             </thead>
             <tbody>
 
-              <?php foreach ($this->productos as $row) {
-              ?>
+              
                 <tr>
                   <td>
                     <div class="d-flex px-1 py-1">
@@ -56,9 +55,7 @@
                     </a>
                   </td>
                 </tr>
-              <?php
-              }
-              ?>
+             
             </tbody>
           </table>
         </div>
@@ -68,9 +65,7 @@
 </div>
 
 
-<?php 
-$i = 1;
-foreach ($this->productos as $row) { ?>
+
   <div class="modal fade" id="modal-confirma-<?php echo $row['id_producto']; ?>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
@@ -92,11 +87,7 @@ foreach ($this->productos as $row) { ?>
               </thead>
               <tbody>
 
-                <?php
                 
-                $bodegas = $row['bodegas'];
-                foreach ($bodegas as $bodega) {
-                ?>
                   <tr class="collapsed" data-bs-toggle="collapse" data-bs-target="#flush-collapse<?php echo $i; ?>" aria-expanded="false" aria-controls="flush-collapse<?php echo $i; ?>">
 
                     <td>
@@ -112,8 +103,7 @@ foreach ($this->productos as $row) { ?>
 
               <tbody id="flush-collapse" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
 
-                <?php foreach ($bodega['lotes'] as $lote) { 
-                  ?>
+                
                   <tr class="text-black-50">
                     <td class="align-middle text-center text-sm">
                     <p class="text-xs font-weight-bold mb-0"><?php echo "Lote " . $lote['lote']; ?></p>
@@ -125,13 +115,9 @@ foreach ($this->productos as $row) { ?>
                     <p class="text-xs font-weight-bold mb-0"><?php echo number_format( $lote['bultos'] , 2,".", ","). " Bultos"; ?></p>
                     </td>
                   </tr>
-                <?php } 
-                $i++;?>
+                
               </tbody>
-            <?php
-                  
-                }
-            ?>
+            
             </tbody>
             </table>
             <br>
@@ -142,8 +128,10 @@ foreach ($this->productos as $row) { ?>
     </div>
   </div>
 
-<?php } ?>
+
 
 
 <script src="<?php echo constant('URL');?>public/js/evitar-envio.js"></script>
+
+<jsp:include page="/JSP/views/footer.jsp" />
 

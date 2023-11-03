@@ -1,3 +1,4 @@
+<jsp:include page="/JSP/views/header.jsp" />
 
 
 <div class="col-md-12">
@@ -65,5 +66,7 @@
     </div>
   </div>
 </div>
+<jsp:include page="/JSP/views/footer.jsp" />
+
 
 
