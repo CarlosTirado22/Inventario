@@ -8,6 +8,10 @@
         <servlet-name>ServletError</servlet-name>
         <servlet-class>Servlet.ServletError</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Consultar</servlet-name>
+        <servlet-class>Operaciones.Consultar</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>VerificaLogin</servlet-name>
         <url-pattern>/VerificaLogin</url-pattern>
@@ -15,6 +19,10 @@
     <servlet-mapping>
         <servlet-name>ServletError</servlet-name>
         <url-pattern>/ServletError</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Consultar</servlet-name>
+        <url-pattern>/Consultar</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
