@@ -4,14 +4,14 @@
 <div class="col-md-12">
   <div class="card">
     <div class="card-header">
-      <h4 class="card-title"><?php echo $this->titulo; ?></h4>
+      <h4 class="card-title">Productos</h4>
     </div>
     <div class="card-body">
 
 
       <div class="row">
         <div class="update ml-4">
-          <a class="btn bg-gradient-primary mb-0" href="<?php echo constant('URL'); ?>productos/nuevo">Agregar nuevo producto</a>
+          <a class="btn bg-gradient-primary mb-0" href="/Inventario/JSP/views/productos/nuevo.jsp">Agregar nuevo producto</a>
 
         </div>
       </div>
@@ -32,8 +32,7 @@
             </thead>
             <tbody>
 
-              <?php foreach ($this->productos as $row) {
-              ?>
+              
                 <tr>
                   <td>
                     <div class="d-flex px-1 py-1">
@@ -57,9 +56,7 @@
                     </a>
                   </td>
                 </tr>
-              <?php
-              }
-              ?>
+              
             </tbody>
           </table>
         </div>

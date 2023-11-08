@@ -4,7 +4,7 @@
 <div class="col-md-12">
   <div class="card card-user">
     <div class="card-header">
-      <h5 class="card-title"><?php echo $this->titulo; ?></h5>
+      <h5 class="card-title">Agregar nuevo producto</h5>
     </div>
     <div class="card-body">
       <form action="<?php echo constant('URL'); ?>productos/registrarProducto" method="POST" enctype="multipart/form-data">
@@ -53,7 +53,7 @@
         <div class="row">
           <div class="update ml-auto mr-auto">
             <button type="submit" class="btn bg-gradient-primary mb-0">Agregar</button>
-            <a href="<?php echo constant('URL'); ?>productos" class="btn btn-outline-secondary mb-0 ">Regresar</a>
+            <a href="/Inventario/JSP/views/productos/index.jsp" class="btn btn-outline-secondary mb-0 ">Regresar</a>
           </div>
         </div>
       </form>

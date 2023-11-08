@@ -4,7 +4,7 @@
 <div class="col-md-12">
   <div class="card">
     <div class="card-header">
-      <h4 class="card-title"><?php echo $this->titulo; ?></h4>
+      <h4 class="card-title">Inventario</h4>
     </div>
     <div class="card-body">
 
@@ -30,7 +30,7 @@
                   <td>
                     <div class="d-flex px-1 py-1">
                       <div>
-                        <img src="<?php echo constant('URL'); ?>public/<?php echo $row['foto']; ?>" class="avatar avatar-xl me-3" alt="user1">
+                         <!-- comment -->
                       </div>
                     </div>
                   </td>
@@ -131,7 +131,7 @@
 
 
 
-<script src="<?php echo constant('URL');?>public/js/evitar-envio.js"></script>
+<script src="public/js/evitar-envio.js"></script>
 
 <jsp:include page="/JSP/views/footer.jsp" />
 
