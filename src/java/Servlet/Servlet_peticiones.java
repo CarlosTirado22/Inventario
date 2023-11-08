@@ -71,6 +71,14 @@ public class Servlet_peticiones extends HttpServlet {
 //     request.getRequestDispatcher("/JSP/views/header.jsp");
      request.getRequestDispatcher("/JSP/views/bodegas/index.jsp").forward( request, response );
      request.getRequestDispatcher("/JSP/views/footer.jsp").forward( request, response );
+     String bodegas=request.getParameter("bodegas");
+     
+     if(bodegas!=null){
+            Vector v = Consultar.Consultarvuelos(vuelo);
+            request.setAttribute("vuelo", v);
+            request.getRequestDispatcher("/JSP/mostrar.jsp").forward( request, response ); 
+        }
+     
     }
 
     /**
