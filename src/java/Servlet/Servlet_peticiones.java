@@ -89,7 +89,7 @@ public class Servlet_peticiones extends HttpServlet {
             if(agregar!=null){
              if(Producto.insertar(new Producto(id,descripcion,precio,cantidad,foto,activo)))
              {
-                 request.getRequestDispatcher("JSP/views/productos/index.jsp").forward( request, response );            
+                 request.getRequestDispatcher("/JSP/views/productos/index.jsp").forward( request, response );            
              }
             }
          }   
