@@ -8,7 +8,10 @@ import Operaciones.*;
 import java.io.IOException;
 import java.io.PrintWriter;
 import static java.lang.System.out;
+import java.sql.SQLException;
 import java.util.Vector;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -67,20 +70,35 @@ public class Servlet_peticiones extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-     out.print("Hola");
 //     request.getRequestDispatcher("/JSP/views/header.jsp");
-     request.getRequestDispatcher("/JSP/views/bodegas/index.jsp").forward( request, response );
-     request.getRequestDispatcher("/JSP/views/footer.jsp").forward( request, response );
-     String guardar=request.getParameter("guardar"); 
-     
-     if(guardar!=null){
-           if(Producto.insertar(new Producto(cedula,nombres,apellidos,direccion,email,celular)))
-           {              
-                      request.getRequestDispatcher("index.jsp").forward( request, response );                  
-           }            
+
+        java.io.PrintWriter out =response.getWriter();
+         try{
+             
+            //request.getRequestDispatcher("/JSP/views/header.jsp").forward( request, response );
+            //request.getRequestDispatcher("/JSP/views/footer.jsp").forward( request, response );
+            
+            String agregar=request.getParameter("agregar");
+            String id=request.getParameter("id");
+            String descripcion=request.getParameter("descripcion");
+            String precio=request.getParameter("precio");
+            String cantidad=request.getParameter("cantidad");
+            String foto=request.getParameter("foto");
+            String activo=request.getParameter("activo");
+            
+            if(agregar!=null){
+             if(Producto.insertar(new Producto(id,descripcion,precio,cantidad,foto,activo)))
+             {
+                 request.getRequestDispatcher("JSP/views/productos/index.jsp").forward( request, response );            
+             }
+            }
+         }   
+            catch(Exception e){            
+                 request.setAttribute("msg","Verifique Datos :"+e); // la e es el tipo de error
+                 request.setAttribute("target","index.jsp");
+                 request.getRequestDispatcher("ServletError").forward(request, response);
+            }
         }
-     
-    }
 
     /**
      * Returns a short description of the servlet.

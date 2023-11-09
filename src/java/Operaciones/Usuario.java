@@ -19,7 +19,7 @@ public class Usuario {
         Connection con = dbm.getConnection();  //abres la conexion
         Usuario obj=null;
         Statement st = con.createStatement();//crear un objeto sentencia, es el que puede ejecutar acciones en la base de datos
-        ResultSet rs = st.executeQuery("Select * from tusuarios  " +
+        ResultSet rs = st.executeQuery("Select * from usuarios  " +
                 " where login = '"+s_login+"' and pwd= '"+s_pwd+"' ");        
         while (rs.next())
         {

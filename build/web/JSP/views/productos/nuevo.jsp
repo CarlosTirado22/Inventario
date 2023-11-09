@@ -7,7 +7,7 @@
       <h5 class="card-title">Agregar nuevo producto</h5>
     </div>
     <div class="card-body">
-      <form action="<?php echo constant('URL'); ?>productos/registrarProducto" method="POST" enctype="multipart/form-data">
+      <form action="/Inventario/Servlet_peticiones" method="POST">
 
         <div class="row">
 
@@ -32,8 +32,17 @@
           <div class="row">
           <div class="col-md-4 pr-1">
             <div class="form-group">
-              <label>Referencia</label>
-              <input type="text" name="referencia" class="form-control" value="<?php if(isset($this->producto)){echo $this->producto['referencia']; }?>" required>
+              <label>Precio</label>
+              <input type="number" name="precio" class="form-control" value="" required>
+            </div>
+          </div>
+          </div>
+            
+            <div class="row">
+          <div class="col-md-4 pr-1">
+            <div class="form-group">
+              <label>Cantidad</label>
+              <input type="number" name="cantidad" class="form-control" value="" required>
             </div>
           </div>
           </div>
@@ -43,11 +52,20 @@
           <div class="col-md-6 pr-1">
             <div class="form-group">
               <label>Descripcion</label>
-              <input type="text" class="form-control" name="descripcion" value="<?php if(isset($this->producto)){echo $this->producto['descripcion']; }?>" required>
+              <input type="text" class="form-control" name="descripcion" value="" required>
             </div>
           </div>
 
         </div>
+          
+          <div class="row">
+          <div class="col-md-4 pr-1">
+            <div class="form-group">
+              <label>Activo</label>
+              <input type="number" name="activo" class="form-control" value="" required>
+            </div>
+          </div>
+          </div>
 
 
         <div class="row">
