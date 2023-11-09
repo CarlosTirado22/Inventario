@@ -1,6 +1,5 @@
 <jsp:include page="/JSP/views/header.jsp" />
-<%@page import="Operaciones.Mostrar"%>
-<%@page import="java.util.Vector"%>
+
 
 
 <div class="col-md-12">
@@ -24,12 +23,6 @@
         <div class="table-responsive p-0">
             <form action="/Inventario/Servlet_peticiones">
                 
-                 
-                 <% Vector clie;%>
-            <% clie = (Vector)request.getAttribute("cliente"); %>
-            <% request.removeAttribute("cliente");
-               Mostrar p = (Mostrar)clie.get(0); %>
-               
           <table class="table align-items-center mb-0" id="table">
             <thead>
               <tr>
@@ -46,16 +39,16 @@
               
                 <tr>
                   <td>
-                    <p class="text-xs font-weight-bold mb-0"><%= p.getFoto() %></p>
+                    <p class="text-xs font-weight-bold mb-0"></p>
                   </td>
                   <td class="align-middle text-center text-sm">
-                    <p class="text-xs font-weight-bold mb-0"><%= p.getPrecio() %></p>
+                    <p class="text-xs font-weight-bold mb-0"></p>
                   </td>
                   <td class="align-middle text-center text-sm">
-                    <p class="text-xs font-weight-bold mb-0"><%= p.getCantidad() %></p>
+                    <p class="text-xs font-weight-bold mb-0"></p>
                   </td>
                   <td class="align-middle text-center text-sm">
-                    <p class="text-xs font-weight-bold mb-0"><%= p.getDescripcion() %></p>
+                    <p class="text-xs font-weight-bold mb-0"></p>
                   </td>
                   <td class="align-middle text-center">
                     <a href="<?php echo constant('URL') . 'productos/verProducto/' . $row['id']; ?>" class="text-dark font-weight-bold text-xs"><i class="fas fa-pencil-alt text-dark me-2" aria-hidden="true"></i>Editar</a>

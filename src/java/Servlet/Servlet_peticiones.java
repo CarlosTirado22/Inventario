@@ -78,8 +78,38 @@ public class Servlet_peticiones extends HttpServlet {
             //request.getRequestDispatcher("/JSP/views/header.jsp").forward( request, response );
             //request.getRequestDispatcher("/JSP/views/footer.jsp").forward( request, response );
             
+//          NAVBAR
+            String inventario=request.getParameter("inventario");
+            String productos=request.getParameter("productos");
+            String clientes=request.getParameter("clientes");
+            String compras=request.getParameter("compras");
+            String ventas=request.getParameter("ventas");
+
+            
+            if(inventario!=null){
+            request.getRequestDispatcher("/JSP/views/inventario/index.jsp").forward( request, response ); 
+            }
+            
+            if(productos!=null){
+            request.getRequestDispatcher("/JSP/views/productos/index.jsp").forward( request, response ); 
+            }
+            
+            if(clientes!=null){
+            request.getRequestDispatcher("/JSP/views/clientes/index.jsp").forward( request, response ); 
+            }
+            
+            if(compras!=null){
+            request.getRequestDispatcher("/JSP/views/compras/index.jsp").forward( request, response ); 
+            }
+            
+            if(ventas!=null){
+            request.getRequestDispatcher("/JSP/views/ventas/index.jsp").forward( request, response ); 
+            }
+            
+//            FIN NAVBAR
+            
+            
             String agregar=request.getParameter("agregar");
-            String productoso=request.getParameter("productoso");
             String id=request.getParameter("id");
             String descripcion=request.getParameter("descripcion");
             String precio=request.getParameter("precio");
@@ -87,17 +117,14 @@ public class Servlet_peticiones extends HttpServlet {
             String foto=request.getParameter("foto");
             String activo=request.getParameter("activo");
             
+            
             if(agregar!=null){
              if(Producto.insertar(new Producto(id,descripcion,precio,cantidad,foto,activo))){
                  request.getRequestDispatcher("/JSP/views/productos/index.jsp").forward( request, response );            
              }
             }
             
-            if(productoso!=null){
-            Vector v = Mostrar.mostrarProductos(id);
-            request.setAttribute("cliente", v);
-            request.getRequestDispatcher("/JSP/views/productos/index.jsp").forward( request, response ); 
-        }
+            
          }   
             catch(Exception e){            
                  request.setAttribute("msg","Verifique Datos :"+e); // la e es el tipo de error
