@@ -10,15 +10,14 @@
       <form action="/Inventario/Servlet_peticiones" method="POST">
 
         <div class="row">
-
+            
+            <!--  
             <div class="alert alert-danger alert-dismissible fade show text-white" role="alert">
               <strong>Ha ocurrido un error! </strong> <?php echo $this->mensaje; ?>
               <button type="button" class="close my-auto text-white" data-bs-dismiss="alert" aria-label="Close">x</button>
             </div>
+            -->
 
-
-
-          
 
           <div class="row">
             <div class="col-md-8 pr-1">
@@ -57,15 +56,6 @@
           </div>
 
         </div>
-          
-          <div class="row">
-          <div class="col-md-4 pr-1">
-            <div class="form-group">
-              <label>Activo</label>
-              <input type="number" name="activo" class="form-control" value="" required>
-            </div>
-          </div>
-          </div>
 
 
         <div class="row">

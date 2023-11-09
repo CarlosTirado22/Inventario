@@ -79,6 +79,7 @@ public class Servlet_peticiones extends HttpServlet {
             //request.getRequestDispatcher("/JSP/views/footer.jsp").forward( request, response );
             
             String agregar=request.getParameter("agregar");
+            String productoso=request.getParameter("productoso");
             String id=request.getParameter("id");
             String descripcion=request.getParameter("descripcion");
             String precio=request.getParameter("precio");
@@ -87,11 +88,16 @@ public class Servlet_peticiones extends HttpServlet {
             String activo=request.getParameter("activo");
             
             if(agregar!=null){
-             if(Producto.insertar(new Producto(id,descripcion,precio,cantidad,foto,activo)))
-             {
+             if(Producto.insertar(new Producto(id,descripcion,precio,cantidad,foto,activo))){
                  request.getRequestDispatcher("/JSP/views/productos/index.jsp").forward( request, response );            
              }
             }
+            
+            if(productoso!=null){
+            Vector v = Mostrar.mostrarProductos(id);
+            request.setAttribute("cliente", v);
+            request.getRequestDispatcher("/JSP/views/productos/index.jsp").forward( request, response ); 
+        }
          }   
             catch(Exception e){            
                  request.setAttribute("msg","Verifique Datos :"+e); // la e es el tipo de error

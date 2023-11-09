@@ -25,15 +25,13 @@ public class Producto {
               DBManager dbm = new DBManager();
               Connection con = dbm.getConnection();
 
-              PreparedStatement st=con.prepareStatement("INSERT INTO productos(id,descripcion,"+
-                                                "precio,cantidad,foto,activo)"+
-                                                "VALUES(?,?,?,?,?,?)");
-             st.setString(1, p.getId());
-             st.setString(2, p.getDescripcion());
-             st.setString(3, p.getPrecio());
-             st.setString(4, p.getCantidad());
-              st.setString(5, p.getFoto());
-             st.setString(6, p.getActivo());
+              PreparedStatement st=con.prepareStatement("INSERT INTO productos(descripcion,"+
+                                                "precio,cantidad,foto)"+
+                                                "VALUES(?,?,?,?)");
+             st.setString(1, p.getDescripcion());
+             st.setString(2, p.getPrecio());
+             st.setString(3, p.getCantidad());
+              st.setString(4, p.getFoto());
              int res=st.executeUpdate();
              st.close();
              dbm.closeConnection( con );

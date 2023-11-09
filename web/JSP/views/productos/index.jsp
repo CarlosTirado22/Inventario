@@ -1,4 +1,6 @@
 <jsp:include page="/JSP/views/header.jsp" />
+<%@page import="Operaciones.Mostrar"%>
+<%@page import="java.util.Vector"%>
 
 
 <div class="col-md-12">
@@ -20,11 +22,20 @@
 
       <div class="card-body px-0 pt-0 pb-2">
         <div class="table-responsive p-0">
+            <form action="/Inventario/Servlet_peticiones">
+                
+                 
+                 <% Vector clie;%>
+            <% clie = (Vector)request.getAttribute("cliente"); %>
+            <% request.removeAttribute("cliente");
+               Mostrar p = (Mostrar)clie.get(0); %>
+               
           <table class="table align-items-center mb-0" id="table">
             <thead>
               <tr>
                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Imagen</th>
-                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Referencia</th>
+                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Precio</th>
+                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Cantidad</th>
                 <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Descripcion</th>
                 <th class="text-secondary opacity-7"></th>
               </tr>
@@ -35,17 +46,16 @@
               
                 <tr>
                   <td>
-                    <div class="d-flex px-1 py-1">
-                      <div>
-                        <img src="<?php echo constant('URL'); ?>public/<?php echo $row['foto'];?>" class="avatar avatar-xl me-3" alt="user1">
-                      </div>
-                    </div>
-                  </td>
-                  <td>
-                    <p class="text-xs font-weight-bold mb-0"><?php echo $row['codigo']; ?></p>
+                    <p class="text-xs font-weight-bold mb-0"><%= p.getFoto() %></p>
                   </td>
                   <td class="align-middle text-center text-sm">
-                    <p class="text-xs font-weight-bold mb-0"><?php echo $row['descripcion']; ?>
+                    <p class="text-xs font-weight-bold mb-0"><%= p.getPrecio() %></p>
+                  </td>
+                  <td class="align-middle text-center text-sm">
+                    <p class="text-xs font-weight-bold mb-0"><%= p.getCantidad() %></p>
+                  </td>
+                  <td class="align-middle text-center text-sm">
+                    <p class="text-xs font-weight-bold mb-0"><%= p.getDescripcion() %></p>
                   </td>
                   <td class="align-middle text-center">
                     <a href="<?php echo constant('URL') . 'productos/verProducto/' . $row['id']; ?>" class="text-dark font-weight-bold text-xs"><i class="fas fa-pencil-alt text-dark me-2" aria-hidden="true"></i>Editar</a>
@@ -53,12 +63,12 @@
                   <td class="align-middle">
                     <a href="#"  data-href="<?php echo constant('URL') . 'productos/eliminarProducto/' . $row['id']; ?>" class="text-danger font-weight-bold text-xs" data-bs-toggle="modal" data-bs-target="#modal-confirma" data-placement="top" title="Eliminar Registro">
                       <i class="far fa-trash-alt me-2"></i>Eliminar</a>
-                    </a>
                   </td>
                 </tr>
               
             </tbody>
           </table>
+           </form>
         </div>
       </div>
     </div>
