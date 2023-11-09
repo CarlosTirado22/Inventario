@@ -7,16 +7,12 @@ public class Cliente {
          private String nombre;
          private String correo;
          private String telefono;
-         private String activo;
-         private String fecha_registro;
 
-    public Cliente(String cedula, String nombre, String correo, String telefono, String activo, String fecha_registro) {
+    public Cliente(String cedula, String nombre, String correo, String telefono) {
         this.cedula = cedula;
         this.nombre = nombre;
         this.correo = correo;
         this.telefono = telefono;
-        this.activo = activo;
-        this.fecha_registro = fecha_registro;
     }
     
     
@@ -27,14 +23,12 @@ public class Cliente {
               Connection con = dbm.getConnection();
 
               PreparedStatement st=con.prepareStatement("INSERT INTO productos(id,descripcion,"+
-                                                "precio,cantidad,foto,activo)"+
-                                                "VALUES(?,?,?,?,?,?)");
+                                                "precio,cantidad,foto)"+
+                                                "VALUES(?,?,?,?,?)");
              st.setString(1, p.getCedula());
              st.setString(2, p.getNombre());
              st.setString(3, p.getCorreo());
              st.setString(4, p.getTelefono());
-              st.setString(5, p.getActivo());
-             st.setString(6, p.getFecha_registro());
              int res=st.executeUpdate();
              st.close();
              dbm.closeConnection( con );
@@ -53,8 +47,6 @@ public class Cliente {
              st.setString(2, p.getNombre());
              st.setString(3, p.getCorreo());
              st.setString(4, p.getTelefono());
-              st.setString(5, p.getActivo());
-             st.setString(6, p.getFecha_registro());
              int res=st.executeUpdate();
              st.close();
              dbm.closeConnection( con );
@@ -68,13 +60,11 @@ public class Cliente {
 
               PreparedStatement st=con.prepareStatement("INSERT INTO tclientes(cedula,nombres,"+
                                                 "apellidos,direccion,email,celular)"+
-                                                "VALUES(?,?,?,?,?,?)");
+                                                "VALUES(?,?,?,?,?)");
              st.setString(1, p.getCedula());
              st.setString(2, p.getNombre());
              st.setString(3, p.getCorreo());
              st.setString(4, p.getTelefono());
-              st.setString(5, p.getActivo());
-             st.setString(6, p.getFecha_registro());
              int res=st.executeUpdate();
              st.close();
              dbm.closeConnection( con );
@@ -132,23 +122,6 @@ public class Cliente {
     public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
-
-    public String getActivo() {
-        return activo;
-    }
-
-    public void setActivo(String activo) {
-        this.activo = activo;
-    }
-
-    public String getFecha_registro() {
-        return fecha_registro;
-    }
-
-    public void setFecha_registro(String fecha_registro) {
-        this.fecha_registro = fecha_registro;
-    }
-
     
    
      

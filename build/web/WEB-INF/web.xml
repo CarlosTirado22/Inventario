@@ -9,8 +9,20 @@
         <servlet-class>Servlet.ServletError</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>Consultar</servlet-name>
-        <servlet-class>Operaciones.Consultar</servlet-class>
+        <servlet-name>Producto</servlet-name>
+        <servlet-class>Operaciones.Producto</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Cliente</servlet-name>
+        <servlet-class>Operaciones.Cliente</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Compra</servlet-name>
+        <servlet-class>Operaciones.Compra</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Ventas</servlet-name>
+        <servlet-class>Operaciones.Venta</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>VerificaLogin</servlet-name>
@@ -21,8 +33,20 @@
         <url-pattern>/ServletError</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>Consultar</servlet-name>
-        <url-pattern>/Consultar</url-pattern>
+        <servlet-name>Producto</servlet-name>
+        <url-pattern>/Producto</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Cliente</servlet-name>
+        <url-pattern>/Cliente</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Compra</servlet-name>
+        <url-pattern>/Compra</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Ventas</servlet-name>
+        <url-pattern>/Ventas</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
