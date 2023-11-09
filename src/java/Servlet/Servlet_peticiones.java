@@ -71,12 +71,13 @@ public class Servlet_peticiones extends HttpServlet {
 //     request.getRequestDispatcher("/JSP/views/header.jsp");
      request.getRequestDispatcher("/JSP/views/bodegas/index.jsp").forward( request, response );
      request.getRequestDispatcher("/JSP/views/footer.jsp").forward( request, response );
-     String bodegas=request.getParameter("bodegas");
+     String guardar=request.getParameter("guardar"); 
      
-     if(bodegas!=null){
-            Vector v = Consultar.Consultarvuelos(vuelo);
-            request.setAttribute("vuelo", v);
-            request.getRequestDispatcher("/JSP/mostrar.jsp").forward( request, response ); 
+     if(guardar!=null){
+           if(Producto.insertar(new Producto(cedula,nombres,apellidos,direccion,email,celular)))
+           {              
+                      request.getRequestDispatcher("index.jsp").forward( request, response );                  
+           }            
         }
      
     }

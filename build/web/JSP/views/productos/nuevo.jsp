@@ -52,7 +52,7 @@
 
         <div class="row">
           <div class="update ml-auto mr-auto">
-            <button type="submit" class="btn bg-gradient-primary mb-0">Agregar</button>
+            <button type="submit" name="agregar" class="btn bg-gradient-primary mb-0">Agregar</button>
             <a href="/Inventario/JSP/views/productos/index.jsp" class="btn btn-outline-secondary mb-0 ">Regresar</a>
           </div>
         </div>
