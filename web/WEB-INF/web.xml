@@ -24,6 +24,10 @@
         <servlet-name>Ventas</servlet-name>
         <servlet-class>Operaciones.Venta</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Mostrar</servlet-name>
+        <servlet-class>Operaciones.Mostrar</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>VerificaLogin</servlet-name>
         <url-pattern>/VerificaLogin</url-pattern>
@@ -47,6 +51,10 @@
     <servlet-mapping>
         <servlet-name>Ventas</servlet-name>
         <url-pattern>/Ventas</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Mostrar</servlet-name>
+        <url-pattern>/Mostrar</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
